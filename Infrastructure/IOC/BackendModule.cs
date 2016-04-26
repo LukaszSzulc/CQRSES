@@ -4,15 +4,14 @@
 
     using Domain.Events;
 
-    using Infrastructure.Bus;
-    using Infrastructure.Commands;
-    using Infrastructure.Commands.Handlers;
-    using Infrastructure.Dal;
-    using Infrastructure.Events;
-    using Infrastructure.Resolver;
+    using Bus;
+    using Commands;
+    using Commands.Handlers;
+    using Dal;
+    using Events;
+    using Resolver;
 
-    using Module = Autofac.Module;
-    class BackendModule : Module
+    public class BackendModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {

@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Client
 {
-    using Domain;
-
-    using Infrastructure.Bus;
     using Infrastructure.Commands;
-    using Infrastructure.Dal;
     using Infrastructure.Messages;
 
     class Program

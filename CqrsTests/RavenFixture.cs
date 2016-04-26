@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace CqrsTests
 {
+    using Autofac;
+
     using global::CqrsTests.Listeners;
 
     using Raven.Client;
@@ -21,7 +23,6 @@ namespace CqrsTests
         public RavenFixture()
         {
             store = new EmbeddableDocumentStore { RunInMemory = true, DefaultDatabase = "TestDatabase"};
-            
             store.Initialize();
             session = store.OpenSession();
         }

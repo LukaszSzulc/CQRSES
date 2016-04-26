@@ -76,7 +76,9 @@
   </Choose>
   <ItemGroup>
     <Compile Include="CqrsTests.cs" />
+    <Compile Include="Listeners\StaleIndexListener.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RavenFixture.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

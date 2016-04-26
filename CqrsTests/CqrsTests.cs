@@ -1,9 +1,13 @@
 ﻿namespace CqrsTests
 {
-    public class CqrsTests
+    using Xunit;
+    public class CqrsTests : IClassFixture<RavenFixture>
     {
-        public void TestMethod1()
+        private readonly RavenFixture fixture;
+
+        public CqrsTests (RavenFixture fixture)
         {
+            this.fixture = fixture;
         }
     }
 }

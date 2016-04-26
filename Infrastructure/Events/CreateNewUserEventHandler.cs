@@ -12,7 +12,7 @@ namespace Infrastructure.Events
 
     using Raven.Client.Document;
 
-    public class CreateNewUserEvent : IEventHandler<AccountUpdateEvent>
+    public class CreateNewUserEventHandler : IEventHandler<AccountUpdateEvent>
     {
         public void Handle(IEvent<AccountUpdateEvent> @event)
         {

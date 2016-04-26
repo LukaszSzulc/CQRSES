@@ -13,9 +13,15 @@
 
     public class UpdateAccountAmmountHandler : ICommandHandler<UpdateAccountAmmountMessage>
     {
+        private readonly IServiceBus serviceBus;
+
+        public UpdateAccountAmmountHandler(IServiceBus serviceBus)
+        {
+            this.serviceBus = serviceBus;
+        }
+
         public void Handle(UpdateAccountAmmountMessage message)
         {
-            var serviceBus = new ServiceBus();
             using (IDocumentStore store = new DocumentStore { Url = "http://localhost:8080" ,DefaultDatabase = "ES"})
             {
                 store.Initialize();

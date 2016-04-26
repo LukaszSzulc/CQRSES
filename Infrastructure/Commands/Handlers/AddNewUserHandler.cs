@@ -17,9 +17,15 @@
 
     public class AddNewUserHandler : ICommandHandler<CreateNewUserMessage>
     {
+        private readonly IServiceBus serviceBus;
+
+        public AddNewUserHandler(IServiceBus serviceBus)
+        {
+            this.serviceBus = serviceBus;
+        }
+
         public void Handle(CreateNewUserMessage message)
         {
-            var serviceBus = new ServiceBus();
             ISnapshotCreator snapshotCreator = new SnapshotCreator();
             using (IDocumentStore store = new DocumentStore { Url = "http://localhost:8080", DefaultDatabase = "ES" })
             {

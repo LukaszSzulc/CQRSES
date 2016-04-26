@@ -47,9 +47,6 @@ namespace Client
                     AccountNumber = "1234567890"
                 }
             };
-            var serviceBus = new ServiceBus();
-
-            serviceBus.Send(createSnapshot);
         }
     }
 }

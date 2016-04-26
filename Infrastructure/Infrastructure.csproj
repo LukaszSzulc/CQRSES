@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Raven.Abstractions, Version=3.0.0.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
       <HintPath>..\packages\RavenDB.Client.3.0.30115\lib\net45\Raven.Abstractions.dll</HintPath>
       <Private>True</Private>
@@ -61,14 +65,17 @@
     <Compile Include="Commands\UpdateAccountAmmountMessage.cs" />
     <Compile Include="Dal\IUserDal.cs" />
     <Compile Include="Dal\UserDal.cs" />
-    <Compile Include="Events\CreateNewUserEvent.cs" />
+    <Compile Include="Events\CreateNewUserEventHandler.cs" />
     <Compile Include="Events\IEventHandler.cs" />
     <Compile Include="Events\UpdateAccountAmmountEventHandler.cs" />
+    <Compile Include="IOC\BackendModule.cs" />
     <Compile Include="Messages\Event.cs" />
     <Compile Include="Messages\IEvent.cs" />
     <Compile Include="Messages\IMessage.cs" />
     <Compile Include="Messages\Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resolver\DependencyResolver.cs" />
+    <Compile Include="Resolver\IDependencyResolver.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj">
